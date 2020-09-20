@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drag n Drop File Upload</title>
+  </head>
+  <body>
+    <div id="drop-area" ondrop="console.log('drop')">
+      <form action="" class="my-form">
+        <input
+          type="file"
+          id="fileElem"
+          onchange="handleFiles(this.files)"
+          multiple
+        />
+
+        <label onclick="alert(123)" class="button">Select some files</label>
+      </form>
+      <progress id="progress-bar" max="100" value="0"></progress>
+      <div id="gallery"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
